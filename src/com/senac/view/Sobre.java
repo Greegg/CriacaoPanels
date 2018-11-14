@@ -11,9 +11,6 @@ package com.senac.view;
  */
 public class Sobre extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Sobre
-     */
     public Sobre() {
         initComponents();
     }

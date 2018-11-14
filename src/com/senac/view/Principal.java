@@ -185,9 +185,13 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem1MouseClicked
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        CadastrarCliente cadastroCliente = new CadastrarCliente();
-        jDesktopPane1.add(cadastroCliente);
-        cadastroCliente.setVisible(true);
+        if (cadastroCliente == null) {
+            cadastroCliente = new CadastrarCliente();
+            jDesktopPane1.add(cadastroCliente);
+            cadastroCliente.setVisible(true);
+        } else {
+            jDesktopPane1.moveToFront(cadastroCliente);
+        }
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     /**
