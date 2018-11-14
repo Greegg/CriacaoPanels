@@ -5,17 +5,17 @@
  */
 package com.senac.view;
 
+import java.awt.Dimension;
+
 /**
  *
  * @author hvb
  */
 public class CadastrarCliente extends javax.swing.JInternalFrame {
 
-    
     public CadastrarCliente() {
         initComponents();
     }
-
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -35,6 +35,7 @@ public class CadastrarCliente extends javax.swing.JInternalFrame {
         jtDataNasc = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
 
+        setClosable(true);
         setVisible(true);
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
@@ -104,6 +105,11 @@ public class CadastrarCliente extends javax.swing.JInternalFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    public void setPosicao() {
+        Dimension d = this.getDesktopPane().getSize();
+        this.setLocation((d.width - this.getSize().width) / 2, (d.height - this.getSize().height) / 2);
+    }
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

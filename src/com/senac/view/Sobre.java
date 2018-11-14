@@ -5,6 +5,8 @@
  */
 package com.senac.view;
 
+import java.awt.Dimension;
+
 /**
  *
  * @author Alunos
@@ -13,6 +15,7 @@ public class Sobre extends javax.swing.JFrame {
 
     public Sobre() {
         initComponents();
+        setLocationRelativeTo( null );
     }
 
     /**
@@ -84,6 +87,8 @@ public class Sobre extends javax.swing.JFrame {
             }
         });
     }
+    
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;

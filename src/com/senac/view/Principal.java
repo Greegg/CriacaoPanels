@@ -18,11 +18,11 @@ import javax.swing.JPanel;
  * @author Alunos
  */
 public class Principal extends javax.swing.JFrame {
-    
+
     private JPanel contentPane;
     private JLabel lblSistemaDeGerenciamento;
-    CadastrarCliente cadastroCliente = null;
-    
+    CadastrarCliente cadastroCliente;
+    Sobre sobre = null;
 
     /**
      * Creates new form Principal
@@ -175,20 +175,29 @@ public class Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
-        Sobre sobre = new Sobre();
-        sobre.setVisible(true);
+
+        if (sobre == null) {
+            sobre = new Sobre();
+            sobre.setVisible(true);
+        } else {
+            sobre.setVisible(true);
+        };
+
     }//GEN-LAST:event_jMenuItem7ActionPerformed
 
     private void jMenuItem1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem1MouseClicked
-        
-                
+
+
     }//GEN-LAST:event_jMenuItem1MouseClicked
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        cadastroCliente = null;
+
         if (cadastroCliente == null) {
             cadastroCliente = new CadastrarCliente();
             jDesktopPane1.add(cadastroCliente);
             cadastroCliente.setVisible(true);
+            cadastroCliente.setPosicao();
         } else {
             jDesktopPane1.moveToFront(cadastroCliente);
         }
@@ -229,6 +238,7 @@ public class Principal extends javax.swing.JFrame {
             }
         });
     }
+
     private static Principal p;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDesktopPane jDesktopPane1;
